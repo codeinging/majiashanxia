@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Majiashanxia</string>
+    <string name="discover">发现</string>
+    <string name="shop">商城</string>
+    <string name="tool">工具</string>
+    <string name="message">消息</string>
+    <string name="mine">我的</string>
 </resources>
