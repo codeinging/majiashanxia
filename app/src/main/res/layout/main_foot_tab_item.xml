@@ -4,8 +4,8 @@
     android:layout_height="wrap_content"
     android:gravity="center_horizontal">
 <ImageView
-    android:layout_width="35dp"
-    android:layout_height="35dp"
+    android:layout_width="@dimen/foot_tab_item_width"
+    android:layout_height="@dimen/foot_tab_item_height"
     android:id="@+id/act_main_tab_host_item_imgview"
     android:layout_gravity="center_horizontal"
     />
@@ -15,5 +15,6 @@
         android:id="@+id/act_main_tab_host_item_textView"
         android:layout_gravity="center_horizontal"
         android:textAlignment="center"
+
         />
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.mphone.majiashanxia.Main_UI_Fragment;
+package com.mphone.majiashanxia.View.Fragment.Main_UI_Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;

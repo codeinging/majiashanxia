@@ -1,4 +1,4 @@
-package com.mphone.majiashanxia;
+package com.mphone.majiashanxia.View.Activity;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentTabHost;
@@ -10,7 +10,8 @@ import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
 import com.mphone.majiashanxia.Constants.Contants;
-import com.mphone.majiashanxia.customOnclicklistener.TabOnClickListener;
+import com.mphone.majiashanxia.R;
+import com.mphone.majiashanxia.Presentor.customOnclicklistener.TabOnClickListener;
 public class MainActivity extends AppCompatActivity {
 //    /**
 //     * 用注解代替find
@@ -20,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
 //    /**此处必须加空格*/
     private LayoutInflater mLayoutInflater;
     private FragmentTabHost mFragmentTabHost;
+    private View titleView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         initView();
     }
     private void initView() {
+        titleView=findViewById(R.id.main_titleView);
         mFragmentTabHost= (FragmentTabHost) findViewById(R.id.act_main_tab_host);
         mLayoutInflater=LayoutInflater.from(this);
         mFragmentTabHost.setup(this,getSupportFragmentManager(),
@@ -49,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             /**
              * 底部点击改变颜色
              * */
-            mFragmentTabHost.getTabWidget().getChildTabViewAt(i).setOnClickListener(new TabOnClickListener(mFragmentTabHost,i));
+            mFragmentTabHost.getTabWidget().getChildTabViewAt(i).setOnClickListener(new TabOnClickListener(mFragmentTabHost,i,titleView));
             mFragmentTabHost.getTabWidget().setGravity(Gravity.CENTER_HORIZONTAL);
         }
     }
@@ -58,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public View getTabItemView(int imageResId, int stringResId){
         View layoutInflater;
-        View view = mLayoutInflater.inflate(R.layout.main_tab_item,null);
+        View view = mLayoutInflater.inflate(R.layout.main_foot_tab_item,null);
         ImageView imageView = (ImageView)view.findViewById(R.id.act_main_tab_host_item_imgview);
         TextView text = (TextView)view.findViewById(R.id.act_main_tab_host_item_textView);
         imageView.setImageResource(imageResId);

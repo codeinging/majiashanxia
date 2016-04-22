@@ -1,4 +1,4 @@
-package com.mphone.majiashanxia.customOnclicklistener;
+package com.mphone.majiashanxia.Presentor.customOnclicklistener;
 
 import android.support.v4.app.FragmentTabHost;
 import android.view.View;
@@ -12,14 +12,23 @@ import com.mphone.majiashanxia.R;
  * Created by syd on 2016/4/19.
  */
 public class TabOnClickListener implements View.OnClickListener {
+    private View titleView;
     private FragmentTabHost fragmentTabHost;
     private int index;
     private View tabItemView;
     private ImageView tabItemImaeView;
     private TextView tabItemTextView;
+    private TextView titleTextView;
     public TabOnClickListener(FragmentTabHost mFragmentTabHost, int index) {
         this.fragmentTabHost=mFragmentTabHost;
         this.index=index;
+    }
+    public TabOnClickListener(FragmentTabHost mFragmentTabHost, int index,View titleView) {
+        this(mFragmentTabHost,index);
+        this.titleView=titleView;
+        if (titleView!=null){
+            titleTextView= (TextView) titleView.findViewById(R.id.title_textView);
+        }
     }
 
     /**
@@ -35,7 +44,10 @@ public class TabOnClickListener implements View.OnClickListener {
             tabItemTextView= (TextView) tabItemView.findViewById(R.id.act_main_tab_host_item_textView);
             if (i==index){
                 tabItemImaeView.setImageResource(Contants.tabImageSelectedArray[i]);
-                //tabItemTextView.setTextColor(Color.BLUE);
+                //tabItemTextView.setTextColor(Color.YELLOW);
+                if (titleTextView!=null){
+                    titleTextView.setText(Contants.tabStringArray[i]);
+                }
             }else {
                 tabItemImaeView.setImageResource(Contants.tabImageNormalArray[i]);
                 //tabItemTextView.setTextColor(Color.BLACK);

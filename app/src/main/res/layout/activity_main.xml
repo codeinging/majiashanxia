@@ -3,10 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mphone.majiashanxia.MainActivity">
+    tools:context=".View.Activity.MainActivity">
+   <include layout="@layout/title_bar"
+       android:id="@+id/main_titleView">
+   </include>
 <FrameLayout
     android:id="@+id/action_main_layout_content"
     android:layout_marginBottom="?attr/actionBarSize"
+    android:layout_marginTop="?actionBarSize"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 </FrameLayout>
@@ -25,4 +29,12 @@
             >
         </FrameLayout>
     </android.support.v4.app.FragmentTabHost>
+    <ImageView
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/foot_tool_mao"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        />
 </RelativeLayout>
