@@ -9,22 +9,23 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
-
 import com.mphone.majiashanxia.Constants.Contants;
 import com.mphone.majiashanxia.customOnclicklistener.TabOnClickListener;
-
 public class MainActivity extends AppCompatActivity {
-
-
-    private FragmentTabHost mFragmentTabHost;
+//    /**
+//     * 用注解代替find
+//     * */
+//    @InjectView(R.id.act_main_tab_host)
+//    private FragmentTabHost mFragmentTabHost;
+//    /**此处必须加空格*/
     private LayoutInflater mLayoutInflater;
+    private FragmentTabHost mFragmentTabHost;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
     }
-
     private void initView() {
         mFragmentTabHost= (FragmentTabHost) findViewById(R.id.act_main_tab_host);
         mLayoutInflater=LayoutInflater.from(this);
@@ -51,8 +52,6 @@ public class MainActivity extends AppCompatActivity {
             mFragmentTabHost.getTabWidget().getChildTabViewAt(i).setOnClickListener(new TabOnClickListener(mFragmentTabHost,i));
             mFragmentTabHost.getTabWidget().setGravity(Gravity.CENTER_HORIZONTAL);
         }
-
-
     }
     /**
      * 设置每个Tab的上面的文字和图片
@@ -66,5 +65,4 @@ public class MainActivity extends AppCompatActivity {
         text.setText(stringResId);
         return view;
     }
-
 }

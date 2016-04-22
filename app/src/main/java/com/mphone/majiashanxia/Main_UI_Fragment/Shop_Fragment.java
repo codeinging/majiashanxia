@@ -18,8 +18,6 @@ public class Shop_Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View mView=inflater.inflate(R.layout.mainui_shop_fragment,container,false);
-
         return mView;
-
     }
 }
