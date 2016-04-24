@@ -11,7 +11,10 @@ import android.widget.TabHost;
 import android.widget.TextView;
 import com.mphone.majiashanxia.Constants.Contants;
 import com.mphone.majiashanxia.R;
-import com.mphone.majiashanxia.Presentor.customOnclicklistener.TabOnClickListener;
+import com.mphone.majiashanxia.TabOnClickListener;
+
+import static com.mphone.majiashanxia.Utils.universialImageLoader.initImageLoader;
+
 public class MainActivity extends AppCompatActivity {
 //    /**
 //     * 用注解代替find
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initImageLoader(getApplicationContext());
         initView();
     }
     private void initView() {
@@ -55,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
              * */
             mFragmentTabHost.getTabWidget().getChildTabViewAt(i).setOnClickListener(new TabOnClickListener(mFragmentTabHost,i,titleView));
             mFragmentTabHost.getTabWidget().setGravity(Gravity.CENTER_HORIZONTAL);
+            /**去掉分割线*/
+            mFragmentTabHost.getTabWidget().setDividerDrawable(null);
         }
     }
     /**

@@ -6,5 +6,6 @@
     <color name="act_main_tab_host_bag">#ffffffff</color>
     <color name="main_ui_tab_item_select_color">#f0f0f0</color>
     <color name="Gold">#FFD700</color>
+    <color name="white">#ffffff</color>
 
 </resources>

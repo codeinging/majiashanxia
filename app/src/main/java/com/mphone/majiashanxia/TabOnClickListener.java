@@ -1,4 +1,4 @@
-package com.mphone.majiashanxia.Presentor.customOnclicklistener;
+package com.mphone.majiashanxia;
 
 import android.support.v4.app.FragmentTabHost;
 import android.view.View;
@@ -6,7 +6,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mphone.majiashanxia.Constants.Contants;
-import com.mphone.majiashanxia.R;
 
 /**
  * Created by syd on 2016/4/19.
@@ -30,7 +29,6 @@ public class TabOnClickListener implements View.OnClickListener {
             titleTextView= (TextView) titleView.findViewById(R.id.title_textView);
         }
     }
-
     /**
      * Called when a view has been clicked.
      *
@@ -44,13 +42,11 @@ public class TabOnClickListener implements View.OnClickListener {
             tabItemTextView= (TextView) tabItemView.findViewById(R.id.act_main_tab_host_item_textView);
             if (i==index){
                 tabItemImaeView.setImageResource(Contants.tabImageSelectedArray[i]);
-                //tabItemTextView.setTextColor(Color.YELLOW);
                 if (titleTextView!=null){
                     titleTextView.setText(Contants.tabStringArray[i]);
                 }
             }else {
                 tabItemImaeView.setImageResource(Contants.tabImageNormalArray[i]);
-                //tabItemTextView.setTextColor(Color.BLACK);
             }
             /**
              * 由于截取了系统的切换fragment事件

@@ -15,5 +15,22 @@
         android:layout_centerHorizontal="true"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="发现"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:src="@drawable/envelope2"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="6dp"
+        android:id="@+id/title_rightButton"
+        android:layout_alignParentEnd="true"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/btn_market2x"
+        android:id="@+id/title_leftButton"
+        />
 
 </RelativeLayout>

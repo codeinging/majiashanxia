@@ -1,8 +1,12 @@
 <resources>
-    <string name="app_name">Majiashanxia</string>
+    <string name="app_name">玛珈山下</string>
     <string name="discover">发现</string>
     <string name="shop">商城</string>
     <string name="tool">工具</string>
     <string name="message">消息</string>
     <string name="mine">我的</string>
+    <string name="life">生活</string>
+    <string name="postGraduate">考研</string>
+    <string name="abroad">出国</string>
+    <string name="getjob">就业</string>
 </resources>

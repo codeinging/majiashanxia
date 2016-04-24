@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TitleBar">
+        <attr name="leftButtonDrawble" format="reference"/>
+        <attr name="rightButtonDrawble" format="reference"/>
+        <attr name="titleText" format="string"/>
+        <attr name="titleTextSize" format="dimension"/>
+        <attr name="titleTextcolor" format="color"/>
+        <attr name="bacground" format="color" />
+    </declare-styleable>
+    <declare-styleable name="GridItem">
+        <attr name="drawble" format="reference"/>
+        <attr name="text" format="string"/>
+        <attr name="textSize" format="dimension" />
+        <attr name="drawbleSize" format="dimension" />
+    </declare-styleable>
+</resources>
